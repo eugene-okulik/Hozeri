@@ -7,8 +7,10 @@ for word in words:
     if ',' not in word and '.' not in word:
         print(f'{word}ing ', end='')
     elif ',' in word:
-        print(f'{word.replace(',', '')}ing, ', end='')
+        word = word.replace(',', '')
+        print(f'{word}ing, ', end='')
     elif '.' in word:
-        print(f'{word.replace('.', '')}ing. ', end='')
+        word = word.replace('.', '')
+        print(f'{word}ing. ', end='')
     else:
         print('There are other punctuation marks')
